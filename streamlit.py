@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # API_URL = "http://localhost:8000/recommend"
-API_URL = "https://monson2002-shl-backend.hf.space"
+API_URL = "https://monson2002-shl-backend.hf.space/recommend"
 
 st.set_page_config(page_title="SHL Assessment Recommender", layout="wide")
 
