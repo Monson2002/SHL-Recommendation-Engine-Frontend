@@ -24,10 +24,11 @@ if st.button("Recommend Assessments"):
             if response.status_code != 200:
                 st.error("Error from backend")
             else:
-                results = response.json()
+                data = response.json()
+                results = data.get("recommended_assessments", [])
 
                 st.subheader("Recommended SHL Tests")
                 for r in results:
-                    st.markdown(f"### ✅ {r['assessment_name']}")
-                    st.markdown(f"[View Test]({r['assessment_url']})")
+                    st.markdown(f"### ✅ {r['name']}")
+                    st.markdown(f"[View Test]({r['url']})")
                     st.markdown("---")
